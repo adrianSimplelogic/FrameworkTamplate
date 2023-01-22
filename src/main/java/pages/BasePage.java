@@ -16,7 +16,7 @@ public class BasePage {
 
     //tworzę konstruktor i przekazuję w nim Webdrivera którego zainicjowałem w linii #13
     //z ręki wywołuję klasę PageFactory która inicjuje elementy, tzn. będzie to robić dla PageObjectach które będą dziedziczyć po BasePage. Potrzebne to jest aby korzystać z adnotacji @FindBy
-    //z ręki tworzę nowe obiekty dla "czekacza" i "akcji", aby móc to zrobić musiałem zainicjować drivera linia #9
+    //z ręki tworzę nowe obiekty dla "czekacza" i "akcji", aby móc to zrobić musiałem zainicjować drivera linia #13
     public BasePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver,this);
