@@ -6,8 +6,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.rmi.UnexpectedException;
 import java.time.Duration;
 
 public class BasePage {
@@ -17,7 +15,7 @@ public class BasePage {
     Actions actions; //inicajcja klasy Acitions, jeżeli jest potrzebna, jeżeli tak, to tutaj jest najlepsze miejsce
 
     //tworzę konstruktor i przekazuję w nim Webdrivera którego zainicjowałem w linii #9
-    //z ręki wywołuję klasę PageObject która inicjuje elementy, tzn. będzie to robić dla PageObjectach które będą dziedziczyć po BasePage. Potrzebne to jest aby korzystać z adnotacji @FindBy
+    //z ręki wywołuję klasę PageFactory która inicjuje elementy, tzn. będzie to robić dla PageObjectach które będą dziedziczyć po BasePage. Potrzebne to jest aby korzystać z adnotacji @FindBy
     //z ręki tworzę nowe obiekty dla "czekacza" i "akcji", aby móc to zrobić musiałem zainicjować drivera linia #9
     public BasePage(WebDriver driver) {
         this.driver = driver;

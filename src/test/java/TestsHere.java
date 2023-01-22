@@ -8,13 +8,14 @@ public class TestsHere extends BaseTest{
     MainPageDuckDuckGo mainPageDuckDuckGo; //inicjuję PageObject
 
     @Test
-    public void someTestName(){
+    public void someTestName() throws InterruptedException {
         mainPageDuckDuckGo = new MainPageDuckDuckGo(driver); //tworzę obiekt strony i wstrzykuję drivera
 
 
         driver.get("https://duckduckgo.com");
         mainPageDuckDuckGo.searchForDog("Dog");
-        Assert.assertTrue(driver.getCurrentUrl().contains("duckduckgo"));
+//        Thread.sleep(200);
+        Assert.assertTrue(driver.getCurrentUrl().contains("q=Dog"));
     }
 
 }
